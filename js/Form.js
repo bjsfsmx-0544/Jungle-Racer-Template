@@ -1,9 +1,9 @@
 class Form {
   constructor() {
-    this.input = createInput("").attribute("placeholder", "Enter your name");
-    this.playButton = createButton("Play");
-    this.resetButton = createButton("Reset");
-    this.titleImg = createImg("./assets/title.png", "game title");
+    this.input = createInput("").attribute("placeholder", "Introduce tu nombre");
+    this.playButton = createButton("Jugar");
+    this.resetButton = createButton("Reiniciar");
+    this.titleImg = createImg("./assets/title.png", "título del juego");
     this.greeting = createElement("h2");
   }
 
@@ -36,15 +36,15 @@ class Form {
       this.input.hide();
       this.playButton.hide();
       var message = `
-      Hello ${this.input.value()}
-      </br>wait for another player to join...`;
+      Hola, ${this.input.value()}
+      </br>Espera a que se una otro jugador...`;
       this.greeting.html(message);
       playerCount += 1;
       player.name = this.input.value();
       player.index = playerCount;
-    player.addPlayer();//aa
+    player.addPlayer();//aaa
       player.updateCount(playerCount); // BP
-     player.getDistance(); //aa
+     player.getDistance(); //aaa
     });
 
     this.resetButton.mousePressed(() => {
